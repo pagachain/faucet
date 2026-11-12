@@ -4,37 +4,39 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Faucet</title>
-  <meta name="description" content="Paga Wallet — descarga el APK. Faucet en construcción.">
+  <meta name="description" content="Paga Wallet — descarga el APK. Logos y colores de Paga para quien quiera colaborar. Faucet en construcción.">
+  <meta name="theme-color" content="#0A1128">
   <link rel="icon" href="paga-logo.png" type="image/png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <style>
     :root {
-      --navy: #0B1F44;
-      --navy2: #12295A;
-      --navy3: #2A3F6E;
-      --gold: #C9A646;
-      --gold2: #E7C766;
+      --bg: #0A1128;
+      --elevated: #12203F;
+      --card: #1C2D5A;
+      --input: #0E1A36;
       --text: #F4F7FB;
-      --muted: #b9c2d6;
+      --muted: #9BB0C9;
+      --accent: #00C896;
+      --accent-ink: #04281F;
+      --warning: #F5C16C;
+      --danger: #FF5C7A;
     }
     * { box-sizing: border-box; }
-    html, body { margin: 0; min-height: 100%; }
+    html { scroll-behavior: smooth; }
     body {
+      margin: 0;
       font-family: -apple-system, system-ui, "Segoe UI", Roboto, sans-serif;
       color: var(--text);
-      background: linear-gradient(160deg, var(--navy) 0%, var(--navy2) 58%, var(--navy3) 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 32px 20px;
+      background: var(--bg);
       line-height: 1.5;
     }
-    main {
+    a { color: var(--accent); }
+    .hero {
+      background: linear-gradient(160deg, #0A1128 0%, #12203F 55%, #1C2D5A 100%);
       text-align: center;
-      max-width: 420px;
-      width: 100%;
+      padding: 56px 20px 64px;
     }
-    img.logo {
+    .hero img.logo {
       width: 112px;
       height: 112px;
       object-fit: contain;
@@ -46,16 +48,18 @@
       font-weight: 800;
       letter-spacing: .02em;
     }
-    .note {
-      color: var(--gold2);
-      font-weight: 600;
-      margin: 0 0 28px;
-      font-size: 1.08rem;
+    h2 {
+      font-size: clamp(1.6rem, 4vw, 2rem);
+      margin: 0 0 8px;
+      font-weight: 800;
     }
-    a.btn {
+    h3.group { margin: 32px 0 14px; font-size: 1.15rem; color: var(--accent); }
+    h3.group:first-child { margin-top: 0; }
+    .note { color: var(--accent); font-weight: 600; margin: 0 0 28px; font-size: 1.08rem; }
+    .btn {
       display: inline-block;
-      background: var(--gold);
-      color: var(--navy);
+      background: var(--accent);
+      color: var(--accent-ink);
       font-weight: 800;
       text-decoration: none;
       padding: 16px 28px;
@@ -63,21 +67,211 @@
       font-size: 1.08rem;
       box-shadow: 0 8px 24px rgba(0,0,0,.25);
     }
-    a.btn:hover { background: var(--gold2); }
-    .hint {
-      margin: 22px 0 0;
-      color: var(--muted);
+    .btn:hover { filter: brightness(1.08); }
+    .hint { margin: 22px 0 0; color: var(--muted); font-size: .92rem; }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+    section { padding: 56px 0; }
+    section.logos { background: var(--elevated); }
+    section.colors { background: var(--bg); }
+    .lead { color: var(--muted); margin: 0 0 28px; max-width: 680px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 28px 24px;
+    }
+    .item { text-align: left; }
+    .preview {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 160px;
+      background: var(--input);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 14px;
+      padding: 18px;
+      margin-bottom: 12px;
+    }
+    .preview.light { background: #F4F7FB; }
+    .preview img { max-width: 100%; max-height: 140px; object-fit: contain; }
+    .item h3 { margin: 0 0 10px; font-size: 1rem; font-weight: 700; }
+    .dls { display: flex; flex-wrap: wrap; gap: 8px; }
+    a.dl {
+      display: inline-block;
+      background: #F4F7FB;
+      color: #0A1128;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: .95rem;
+      padding: 8px 16px;
+      border-radius: 999px;
+    }
+    a.dl:hover { background: var(--accent); color: var(--accent-ink); }
+    .swatches {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 16px;
+      margin-bottom: 8px;
+    }
+    .swatch {
+      height: 132px;
+      border-radius: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: 700;
       font-size: .92rem;
+      border: 1px solid rgba(255,255,255,.08);
+      padding: 10px;
+    }
+    .swatch code {
+      display: block;
+      margin-top: 8px;
+      font-size: .95rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      user-select: all;
+    }
+    footer {
+      background: #060b18;
+      color: var(--muted);
+      text-align: center;
+      padding: 24px 20px;
+      font-size: .88rem;
     }
   </style>
 </head>
 <body>
-  <main>
+  <header class="hero">
     <img class="logo" src="paga-logo.png" alt="Paga">
     <h1>Faucet</h1>
     <p class="note">En construcción.</p>
     <a class="btn" href="https://github.com/pagachain/faucet/releases/download/v5.0.1/paga-wallet-v5.0.1.apk">Descargar Paga Wallet v5.0.1</a>
     <p class="hint">APK para Android. Al instalarlo, el teléfono puede pedir permiso para apps de fuera de la tienda.</p>
-  </main>
+  </header>
+
+  <section class="logos" id="logos">
+    <div class="wrap">
+      <h2>Logos</h2>
+      <p class="lead">Material de Paga para quien quiera colaborar, o para que Jesús lo baje y lo use. Puedes descargar cada archivo, o todo junto en un ZIP (incluye también los colores).</p>
+      <p style="margin:0 0 32px">
+        <a class="btn" href="downloads/paga-kit-marca.zip">Descargar todo (ZIP)</a>
+      </p>
+      <div class="grid">
+        <div class="item">
+          <div class="preview"><img src="downloads/logos/paga-logo.png" alt="Logo de Paga"></div>
+          <h3>Paga</h3>
+          <div class="dls"><a class="dl" href="downloads/logos/paga-logo.png" download>Descargar .png</a></div>
+        </div>
+        <div class="item">
+          <div class="preview"><img src="downloads/logos/paga-logo-plata.png" alt="Logo de Paga en plata"></div>
+          <h3>Paga (plata)</h3>
+          <div class="dls"><a class="dl" href="downloads/logos/paga-logo-plata.png" download>Descargar .png</a></div>
+        </div>
+        <div class="item">
+          <div class="preview light"><img src="downloads/logos/pagos-claro.png" alt="Logo de Pagos"></div>
+          <h3>Pagos</h3>
+          <div class="dls"><a class="dl" href="downloads/logos/pagos-claro.png" download>Descargar .png</a></div>
+        </div>
+        <div class="item">
+          <div class="preview light"><img src="downloads/logos/pagos-marca.png" alt="Marca de Pagos"></div>
+          <h3>Pagos (marca)</h3>
+          <div class="dls"><a class="dl" href="downloads/logos/pagos-marca.png" download>Descargar .png</a></div>
+        </div>
+        <div class="item">
+          <div class="preview light"><img src="downloads/logos/pagos-lockup.png" alt="Pagos — Red de pagos"></div>
+          <h3>Pagos — Red de pagos</h3>
+          <div class="dls"><a class="dl" href="downloads/logos/pagos-lockup.png" download>Descargar .png</a></div>
+        </div>
+        <div class="item">
+          <div class="preview light"><img src="downloads/logos/pagos.jpeg" alt="Pagos claro y oscuro"></div>
+          <h3>Pagos (claro y oscuro)</h3>
+          <div class="dls"><a class="dl" href="downloads/logos/pagos.jpeg" download>Descargar .jpeg</a></div>
+        </div>
+        <div class="item">
+          <div class="preview"><img src="downloads/logos/cent-icono.png" alt="Icono de CENT"></div>
+          <h3>CENT</h3>
+          <div class="dls"><a class="dl" href="downloads/logos/cent-icono.png" download>Descargar .png</a></div>
+        </div>
+        <div class="item">
+          <div class="preview"><img src="downloads/logos/cent-oscuro.png" alt="CENT oscuro"></div>
+          <h3>CENT (oscuro)</h3>
+          <div class="dls"><a class="dl" href="downloads/logos/cent-oscuro.png" download>Descargar .png</a></div>
+        </div>
+        <div class="item">
+          <div class="preview light"><img src="downloads/logos/cent.jpeg" alt="CENT claro y oscuro"></div>
+          <h3>CENT (claro y oscuro)</h3>
+          <div class="dls"><a class="dl" href="downloads/logos/cent.jpeg" download>Descargar .jpeg</a></div>
+        </div>
+        <div class="item">
+          <div class="preview light"><img src="downloads/logos/cent-metal.jpeg" alt="CENT metal"></div>
+          <h3>CENT (metal)</h3>
+          <div class="dls"><a class="dl" href="downloads/logos/cent-metal.jpeg" download>Descargar .jpeg</a></div>
+        </div>
+        <div class="item">
+          <div class="preview light"><img src="downloads/logos/pagos-y-cent.jpeg" alt="Pagos y CENT"></div>
+          <h3>Pagos y CENT</h3>
+          <div class="dls"><a class="dl" href="downloads/logos/pagos-y-cent.jpeg" download>Descargar .jpeg</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="colors" id="colores">
+    <div class="wrap">
+      <h2>Colores</h2>
+      <p class="lead">Los colores que usamos en Paga Wallet y en las apps de View, para copiar el código o descargarlos en un archivo.</p>
+
+      <h3 class="group">Paga Wallet</h3>
+      <div class="swatches">
+        <div class="swatch" style="background:#0A1128"><span>Fondo</span><code>#0A1128</code></div>
+        <div class="swatch" style="background:#12203F"><span>Elevado</span><code>#12203F</code></div>
+        <div class="swatch" style="background:#1C2D5A"><span>Tarjeta</span><code>#1C2D5A</code></div>
+        <div class="swatch" style="background:#0E1A36"><span>Entrada</span><code>#0E1A36</code></div>
+        <div class="swatch" style="background:#F4F7FB;color:#0A1128"><span>Texto</span><code>#F4F7FB</code></div>
+        <div class="swatch" style="background:#9BB0C9;color:#0A1128"><span>Texto suave</span><code>#9BB0C9</code></div>
+        <div class="swatch" style="background:#00C896;color:#04281F"><span>Acento verde</span><code>#00C896</code></div>
+        <div class="swatch" style="background:#04281F"><span>Sobre el acento</span><code>#04281F</code></div>
+        <div class="swatch" style="background:#F5C16C;color:#0A1128"><span>Aviso</span><code>#F5C16C</code></div>
+        <div class="swatch" style="background:#FF5C7A;color:#0A1128"><span>Peligro</span><code>#FF5C7A</code></div>
+      </div>
+
+      <h3 class="group">Pagos View</h3>
+      <div class="swatches">
+        <div class="swatch" style="background:#0B1220"><span>Fondo</span><code>#0B1220</code></div>
+        <div class="swatch" style="background:#121B2B"><span>Tarjeta</span><code>#121B2B</code></div>
+        <div class="swatch" style="background:#263247"><span>Borde</span><code>#263247</code></div>
+        <div class="swatch" style="background:#E6EDF3;color:#0B1220"><span>Texto</span><code>#E6EDF3</code></div>
+        <div class="swatch" style="background:#9AA7B4;color:#0B1220"><span>Texto suave</span><code>#9AA7B4</code></div>
+        <div class="swatch" style="background:#2ECC8F;color:#04281F"><span>Acento verde</span><code>#2ECC8F</code></div>
+        <div class="swatch" style="background:#1FA971"><span>Botón</span><code>#1FA971</code></div>
+        <div class="swatch" style="background:#7CC4FF;color:#0B1220"><span>Enlace</span><code>#7CC4FF</code></div>
+        <div class="swatch" style="background:#F2C14E;color:#0B1220"><span>Aviso</span><code>#F2C14E</code></div>
+        <div class="swatch" style="background:#FF7B72;color:#0B1220"><span>Error</span><code>#FF7B72</code></div>
+      </div>
+
+      <h3 class="group">Wallet View</h3>
+      <div class="swatches">
+        <div class="swatch" style="background:#0D1117"><span>Fondo</span><code>#0D1117</code></div>
+        <div class="swatch" style="background:#15102E"><span>Tema</span><code>#15102E</code></div>
+        <div class="swatch" style="background:#161B22"><span>Tarjeta</span><code>#161B22</code></div>
+        <div class="swatch" style="background:#30363D"><span>Borde</span><code>#30363D</code></div>
+        <div class="swatch" style="background:#E6EDF3;color:#0D1117"><span>Texto</span><code>#E6EDF3</code></div>
+        <div class="swatch" style="background:#8B949E;color:#0D1117"><span>Texto suave</span><code>#8B949E</code></div>
+        <div class="swatch" style="background:#58A6FF;color:#0D1117"><span>Título azul</span><code>#58A6FF</code></div>
+        <div class="swatch" style="background:#238636"><span>Botón verde</span><code>#238636</code></div>
+        <div class="swatch" style="background:#3FB950;color:#0D1117"><span>Total</span><code>#3FB950</code></div>
+        <div class="swatch" style="background:#F85149;color:#0D1117"><span>Error</span><code>#F85149</code></div>
+      </div>
+
+      <p class="dls" style="margin-top:28px">
+        <a class="dl" href="downloads/colores-paga.txt" download>Descargar .txt</a>
+        <a class="dl" href="downloads/colores-paga.css" download>Descargar .css</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>Paga · Faucet en construcción</footer>
 </body>
 </html>

@@ -1,0 +1,38 @@
+Colores de Paga
+===============
+
+Paga Wallet
+  Fondo            #0A1128
+  Elevado          #12203F
+  Tarjeta          #1C2D5A
+  Entrada          #0E1A36
+  Texto            #F4F7FB
+  Texto suave      #9BB0C9
+  Acento verde     #00C896
+  Sobre el acento  #04281F
+  Aviso            #F5C16C
+  Peligro          #FF5C7A
+
+Pagos View
+  Fondo            #0B1220
+  Tarjeta          #121B2B
+  Borde            #263247
+  Texto            #E6EDF3
+  Texto suave      #9AA7B4
+  Acento verde     #2ECC8F
+  Botón            #1FA971
+  Enlace           #7CC4FF
+  Aviso            #F2C14E
+  Error            #FF7B72
+
+Wallet View
+  Fondo            #0D1117
+  Tema             #15102E
+  Tarjeta          #161B22
+  Borde            #30363D
+  Texto            #E6EDF3
+  Texto suave      #8B949E
+  Título azul      #58A6FF
+  Botón verde      #238636
+  Total            #3FB950
+  Error            #F85149

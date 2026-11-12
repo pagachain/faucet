@@ -1,0 +1,43 @@
+/* Colores de Paga — cartera y apps de View */
+
+/* Paga Wallet */
+:root {
+  --paga-wallet-bg: #0A1128;
+  --paga-wallet-elevated: #12203F;
+  --paga-wallet-card: #1C2D5A;
+  --paga-wallet-input: #0E1A36;
+  --paga-wallet-text: #F4F7FB;
+  --paga-wallet-muted: #9BB0C9;
+  --paga-wallet-accent: #00C896;
+  --paga-wallet-accent-ink: #04281F;
+  --paga-wallet-warning: #F5C16C;
+  --paga-wallet-danger: #FF5C7A;
+}
+
+/* Pagos View */
+:root {
+  --pagos-view-bg: #0B1220;
+  --pagos-view-card: #121B2B;
+  --pagos-view-border: #263247;
+  --pagos-view-text: #E6EDF3;
+  --pagos-view-muted: #9AA7B4;
+  --pagos-view-accent: #2ECC8F;
+  --pagos-view-button: #1FA971;
+  --pagos-view-link: #7CC4FF;
+  --pagos-view-warning: #F2C14E;
+  --pagos-view-error: #FF7B72;
+}
+
+/* Wallet View */
+:root {
+  --wallet-view-bg: #0D1117;
+  --wallet-view-theme: #15102E;
+  --wallet-view-card: #161B22;
+  --wallet-view-border: #30363D;
+  --wallet-view-text: #E6EDF3;
+  --wallet-view-muted: #8B949E;
+  --wallet-view-title: #58A6FF;
+  --wallet-view-button: #238636;
+  --wallet-view-total: #3FB950;
+  --wallet-view-error: #F85149;
+}
