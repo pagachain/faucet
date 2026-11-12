@@ -272,6 +272,91 @@
     </div>
   </section>
 
+  
+  <section class="prompt" id="prompt" style="background:#12203F;padding:56px 0">
+    <div class="wrap">
+      <h2>Prompt para un bot</h2>
+      <p class="lead">Si alguien manda a un bot a hacer un widget, una tarjeta o un diseño de Paga, que copie este texto y lo pegue. Al final se escribe lo que se quiere generar. Jesús también puede usarlo.</p>
+      <p class="dls" style="margin:0 0 18px">
+        <a class="dl" href="downloads/prompt-bot-paga.txt" download>Descargar el prompt (.txt)</a>
+        <button type="button" class="dl" id="copiar-prompt" style="border:0;cursor:pointer;font:inherit">Copiar</button>
+      </p>
+      <textarea id="prompt-texto" readonly rows="18" style="width:100%;max-width:100%;background:#0E1A36;color:#F4F7FB;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:16px;font:13px/1.5 ui-monospace,Menlo,monospace;resize:vertical">Vas a crear un widget o un elemento visual para Paga (Pagachain). Usa solo esta marca, no inventes otros logos ni otros colores, y no uses la marca de HEX ni de ningún otro proyecto.
+
+Logos oficiales (descárgalos de estas direcciones y úsalos tal cual; no los redibujes):
+- Paga: https://pagachain.github.io/faucet/downloads/logos/paga-logo.png
+- Paga (plata): https://pagachain.github.io/faucet/downloads/logos/paga-logo-plata.png
+- Pagos: https://pagachain.github.io/faucet/downloads/logos/pagos-claro.png
+- Pagos (marca): https://pagachain.github.io/faucet/downloads/logos/pagos-marca.png
+- Pagos — Red de pagos: https://pagachain.github.io/faucet/downloads/logos/pagos-lockup.png
+- CENT: https://pagachain.github.io/faucet/downloads/logos/cent-icono.png
+- Kit completo (ZIP): https://pagachain.github.io/faucet/downloads/paga-kit-marca.zip
+
+Colores de Paga Wallet (úsalos en cualquier interfaz de Paga):
+- Fondo: #0A1128
+- Elevado: #12203F
+- Tarjeta: #1C2D5A
+- Entrada: #0E1A36
+- Texto: #F4F7FB
+- Texto suave: #9BB0C9
+- Acento verde: #00C896
+- Texto sobre el acento: #04281F
+- Aviso: #F5C16C
+- Peligro: #FF5C7A
+
+Colores de Pagos View (si el trabajo es sobre Pagos View):
+- Fondo: #0B1220
+- Tarjeta: #121B2B
+- Borde: #263247
+- Texto: #E6EDF3
+- Texto suave: #9AA7B4
+- Acento verde: #2ECC8F
+- Botón: #1FA971
+- Enlace: #7CC4FF
+- Aviso: #F2C14E
+- Error: #FF7B72
+
+Colores de Wallet View (si el trabajo es sobre Wallet View):
+- Fondo: #0D1117
+- Tema: #15102E
+- Tarjeta: #161B22
+- Borde: #30363D
+- Texto: #E6EDF3
+- Texto suave: #8B949E
+- Título azul: #58A6FF
+- Botón verde: #238636
+- Total: #3FB950
+- Error: #F85149
+
+Reglas:
+- Fondo oscuro, acento verde, texto claro.
+- En un trabajo de Paga Wallet, el acento es #00C896 sobre #0A1128.
+- Incluye el logo que corresponda (Paga, Pagos o CENT).
+- El texto de la interfaz va en español, claro y breve.
+- No añadas eslóganes, premios ni urgencia que no te hayan pedido.
+- Entrega el resultado listo para usar (imagen, HTML o el formato que te pidan).
+
+Lo que tienes que generar es esto:
+(escribe aquí lo que quieres: por ejemplo un widget de saldo de PAGA, una tarjeta de enviar y recibir, un icono para la app, una tarjeta para redes…)
+</textarea>
+    </div>
+  </section>
+  <script>
+    document.getElementById('copiar-prompt').addEventListener('click', async function () {
+      const t = document.getElementById('prompt-texto');
+      try {
+        await navigator.clipboard.writeText(t.value);
+        this.textContent = 'Copiado';
+        setTimeout(() => { this.textContent = 'Copiar'; }, 2000);
+      } catch (e) {
+        t.select();
+        document.execCommand('copy');
+        this.textContent = 'Copiado';
+        setTimeout(() => { this.textContent = 'Copiar'; }, 2000);
+      }
+    });
+  </script>
+
   <footer>Paga · Faucet en construcción</footer>
 </body>
 </html>
