@@ -133,6 +133,45 @@
       letter-spacing: .04em;
       user-select: all;
     }
+
+    .faucet-box {
+      max-width: 440px;
+      margin: 32px auto 0;
+      background: #12203F;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 16px;
+      padding: 20px 18px 18px;
+      text-align: left;
+    }
+    .faucet-box label {
+      display: block;
+      color: #9BB0C9;
+      font-size: .88rem;
+      font-weight: 600;
+      margin: 0 0 8px;
+    }
+    .faucet-box input {
+      width: 100%;
+      background: #0E1A36;
+      color: #9BB0C9;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 1.02rem;
+      margin-bottom: 12px;
+    }
+    .faucet-box input::placeholder { color: #9BB0C9; }
+    .faucet-box button[disabled] {
+      width: 100%;
+      background: #1C2D5A;
+      color: #9BB0C9;
+      border: 0;
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: not-allowed;
+    }
     footer {
       background: #060b18;
       color: var(--muted);
@@ -146,9 +185,13 @@
   <header class="hero">
     <img class="logo" src="paga-logo.png" alt="Paga">
     <h1>Faucet</h1>
-    <p class="note">En construcción.</p>
     <a class="btn" href="https://github.com/pagachain/faucet/releases/download/v5.0.1/paga-wallet-v5.0.1.apk">Descargar Paga Wallet v5.0.1</a>
     <p class="hint">APK para Android. Al instalarlo, el teléfono puede pedir permiso para apps de fuera de la tienda.</p>
+    <div class="faucet-box">
+      <label for="direccion">Dirección</label>
+      <input id="direccion" type="text" placeholder="Pronto. En construcción." disabled>
+      <button type="button" disabled>Enviar</button>
+    </div>
   </header>
 
   <section class="logos" id="logos">
