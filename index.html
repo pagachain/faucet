@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Faucet</title>
+  <meta name="description" content="Paga Wallet — descarga el APK. Faucet en construcción.">
+  <link rel="icon" href="paga-logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <style>
+    :root {
+      --navy: #0B1F44;
+      --navy2: #12295A;
+      --navy3: #2A3F6E;
+      --gold: #C9A646;
+      --gold2: #E7C766;
+      --text: #F4F7FB;
+      --muted: #b9c2d6;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      font-family: -apple-system, system-ui, "Segoe UI", Roboto, sans-serif;
+      color: var(--text);
+      background: linear-gradient(160deg, var(--navy) 0%, var(--navy2) 58%, var(--navy3) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 20px;
+      line-height: 1.5;
+    }
+    main {
+      text-align: center;
+      max-width: 420px;
+      width: 100%;
+    }
+    img.logo {
+      width: 112px;
+      height: 112px;
+      object-fit: contain;
+      filter: drop-shadow(0 6px 18px rgba(0,0,0,.35));
+    }
+    h1 {
+      font-size: clamp(2rem, 6vw, 2.8rem);
+      margin: 22px 0 8px;
+      font-weight: 800;
+      letter-spacing: .02em;
+    }
+    .note {
+      color: var(--gold2);
+      font-weight: 600;
+      margin: 0 0 28px;
+      font-size: 1.08rem;
+    }
+    a.btn {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      font-weight: 800;
+      text-decoration: none;
+      padding: 16px 28px;
+      border-radius: 12px;
+      font-size: 1.08rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,.25);
+    }
+    a.btn:hover { background: var(--gold2); }
+    .hint {
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="logo" src="paga-logo.png" alt="Paga">
+    <h1>Faucet</h1>
+    <p class="note">En construcción.</p>
+    <a class="btn" href="https://github.com/pagachain/faucet/releases/download/v5.0.1/paga-wallet-v5.0.1.apk">Descargar Paga Wallet v5.0.1</a>
+    <p class="hint">APK para Android. Al instalarlo, el teléfono puede pedir permiso para apps de fuera de la tienda.</p>
+  </main>
+</body>
+</html>
